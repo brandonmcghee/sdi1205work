@@ -1,16 +1,19 @@
 //This Javascript developed by Brandon McGhee for SDI 1205 Project 2
 
 var boys = ["Brandon", "Mike", "Chuck"];
+var zelda = [
+             "A group of friends were enjoying a great game of Legend of Zelda one day.  ",
+             " was playing and ",
+             " were cheering him on.  ",
+             "Suddenly the power went out and the game was lost!"
+             ];
 var activities = ["Basketball", "Bamboo Quest"];
-var current = false;
-var eod = 5;
+var current = true;
+var powerfailure = 4;
 
-while (eod > 0) {
-    console.log(boys[0] + " is running away from the dogs.");
-    eod--;
-    
-        for (i = 0; i < 3;  i++) {
-            console.log(boys[1] + " and " + boys[2] + " jumped the fence.");
-        };
+
+for (var i = 0; i < powerfailure; i++) {
+    console.log(zelda[i]);
 };
+
 
