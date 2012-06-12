@@ -1,23 +1,49 @@
 //Brandon McGhee Assignment 3
 
-var boyBuilder = function (name, age, skills, suggestion) {
+
+var boyBuilder = function (Name) {
+  
+    var _Name = function() {
+        return Name;
+    }
+    var setAge = function(num) {
+        age = num;
+    }
     
-    var accessName = function() { return name;}
-    var accessAge = function() { return age;}
-    var accessSkills = function() { return skills;}
-    var accessSuggestion = function() { return suggestion}
+    var _Age = function() {
+        return age;
+        }
+        
+    var setSkills = function(item) {
+        skills = item;
+    }
+    var _Skills = function() {
+        return skills;
+        }
     
     return {
-        "name": accessName,
-        "age": accessAge,
-        "skills": accessSkills,
-        "suggestion": accessSuggestion
+        "Name": _Name,
+        "Age": _Age,
+        "setAge": setAge,
+        "Skills": _Skills,
+        "setSkills": setSkills
     };
 };
 
-var boy1 = boyBuilder("Mike", 11, "Ninja Skills", "Bamboo Quest");
-var boy2 = boyBuilder("Chuck", 12, "Electrical Skills", "Basketball");
-var boy3 = boyBuilder("Brandon", 11, "Computer Hacking Skills", "Don't Care");
+var mike = boyBuilder("Mike");
+mike.setAge(11);
+mike.setSkills("Ninja");
 
-console.log(boy1.age());
+console.log(mike.Name() + " is " + mike.Age() + " years old and has nice " + mike.Skills() + " skills.");
 
+var chuck = boyBuilder("Chuck");
+mike.setAge(12);
+mike.setSkills("Electrical");
+
+console.log(chuck.Name() + " is " + chuck.Age() + " years old and has nice " + chuck.Skills() + " skills.");
+
+var brandon = boyBuilder("Brandon");
+mike.setAge(11);
+mike.setSkills("Computer Hacking");
+
+console.log(brandon.Name() + " is " + brandon.Age() + " years old and has nice " + brandon.Skills() + " skills.");
