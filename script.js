@@ -1,5 +1,29 @@
 //Brandon McGhee Assignment 3
 
+var jsonData = {
+    "boys": {
+            "mike": {
+                "name": "",
+                "age": null,
+                "skills": "",
+                "activities": []
+            },
+            "chuck": {
+                "name": "",
+                "age": null,
+                "skills": "",
+                "activities": []
+            },
+            "brandon": {
+                "name": "",
+                "age": null,
+                "skills": "",
+                "activities": []
+            }
+            
+    }
+};
+
 
 var boyBuilder = function (Name) {
   
@@ -47,3 +71,14 @@ mike.setAge(11);
 mike.setSkills("Computer Hacking");
 
 console.log(brandon.Name() + " is " + brandon.Age() + " years old and has nice " + brandon.Skills() + " skills.");
+
+console.log(brandon.Name());
+console.log(chuck.Name());
+
+
+
+jsonData.boys.brandon.age = brandon.Age();
+jsonData.boys.brandon.skills = brandon.Skills();
+
+console.log(jsonData.boys.brandon.age);
+console.log(jsonData.boys.brandon.skills);
