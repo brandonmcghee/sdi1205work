@@ -22,12 +22,21 @@ var stringFunc = function() {
         }
     }
     
+    var isURL = function(link) {
+        
+    }
+    
     return {
-        "isPhone": isPhoneNum
+        "isPhone": isPhoneNum,
+        "isURL": isURL
     }
     
 };
 
-var inputPhone = "404-555-1234";
+var inputPhone = "555-555-5555";
 var PHONE = stringFunc("phoneValidate");
 PHONE.isPhone(inputPhone);
+
+var inputLink = "http://www.fullsail.edu";
+var URL = stringFunc("urlValidate");
+URL.isURL(inputLink);
