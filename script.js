@@ -68,6 +68,11 @@ var numFunc = function(name) {
     var strToNum = function(string) {
         console.log(parseInt(string));
     }
+    //Two Decimal Place Setter Function
+    var numDeci = function(num) {
+        var fix = num.toFixed(2);
+        console.log(fix);
+    }
     
     return {
         "strToNum": strToNum,
@@ -94,6 +99,6 @@ var inputString = "42";
 var NUMSTRING = numFunc("stringToNumber");
 NUMSTRING.strToNum(inputString);
 
-var inputNumDecimal = "2.5"
+var inputNumDecimal = 2.5
 var NUMDECI = numFunc("numDecimal");
 NUMDECI.numDeci(inputNumDecimal);
