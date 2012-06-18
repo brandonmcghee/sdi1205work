@@ -66,7 +66,7 @@ var numFunc = function(name) {
     
     //String to Number Function
     var strToNum = function(string) {
-        console.log(parseInt(string, 43));
+        console.log(parseInt(string));
     }
     
     return {
@@ -74,6 +74,7 @@ var numFunc = function(name) {
     }
 }
 
+//String Functions
 var inputPhone = "555-555-5555";
 var PHONE = stringFunc("phoneValidate");
 PHONE.isPhone(inputPhone);
@@ -86,6 +87,8 @@ var inputEmail = "CaptainPants@skitskat.org"
 var EMAIL = stringFunc("emailValidate");
 EMAIL.isEmail(inputEmail);
 
-var inputString = "This is a string";
+
+//Number Functions
+var inputString = "42";
 var NUMSTRING = numFunc("stringToNumber");
 NUMSTRING.strToNum(inputString);
