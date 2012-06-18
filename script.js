@@ -3,11 +3,13 @@
 
 var stringFunc = function() {
     
+    var verify = 0;
+    var dash = "-";
+    var at = "@";
+    var per = ".";
+
     var isPhoneNum = function(phoneNum) {
-        
-        var dash = "-";
-        var verify = 0;
-        
+
         for (var i = 0; i < phoneNum.length; i++) {
             if (phoneNum.charAt(i) == dash) {
                 verify++;
@@ -31,9 +33,23 @@ var stringFunc = function() {
         }
     }
     
+    var isEmail = function(address) {
+        verify = 0;
+        for (var i = 0; i < address.length; i++) {
+            if (address.charAt(i) == at || address.charAt(i) == per) {
+                verify++;
+            }
+        }
+        
+        if (verify == 2 && address.indexOf(at) < address.indexOf(per)) {
+            console.log("Valid Email Address");
+        }
+    }
+    
     return {
         "isPhone": isPhoneNum,
-        "isURL": isURL
+        "isURL": isURL,
+        "isEmail": isEmail
     }
     
 };
@@ -45,3 +61,7 @@ PHONE.isPhone(inputPhone);
 var inputLink = "http://www.fullsail.edu";
 var URL = stringFunc("urlValidate");
 URL.isURL(inputLink);
+
+var inputEmail = "CaptainPants@skitskat.org"
+var EMAIL = stringFunc("emailValidate");
+EMAIL.isEmail(inputEmail);
