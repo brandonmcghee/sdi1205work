@@ -8,6 +8,7 @@ var stringFunc = function() {
     var at = "@";
     var per = ".";
 
+    //Phone Number Validation Function
     var isPhoneNum = function(phoneNum) {
 
         for (var i = 0; i < phoneNum.length; i++) {
@@ -24,15 +25,17 @@ var stringFunc = function() {
         }
     }
     
+    //URL Validation Function
     var isURL = function(link) {
         if (link.substring(0,5) == "http:" || link.substring(0,6) == "https:") {
-            console.log("Valid Email Address");
+            console.log("Valid URL");
         }
         else {
-            console.log("Invalid Email Address");
+            console.log("Invalid URL");
         }
     }
     
+    //Email Validation Function
     var isEmail = function(address) {
         verify = 0;
         for (var i = 0; i < address.length; i++) {
@@ -44,15 +47,32 @@ var stringFunc = function() {
         if (verify == 2 && address.indexOf(at) < address.indexOf(per)) {
             console.log("Valid Email Address");
         }
+        else {
+            console.log("Invalid Email Address");
+        }
     }
+    
+
     
     return {
         "isPhone": isPhoneNum,
         "isURL": isURL,
-        "isEmail": isEmail
+        "isEmail": isEmail,
     }
     
 };
+
+var numFunc = function(name) {
+    
+    //String to Number Function
+    var strToNum = function(string) {
+        console.log(parseInt(string, 43));
+    }
+    
+    return {
+        "strToNum": strToNum
+    }
+}
 
 var inputPhone = "555-555-5555";
 var PHONE = stringFunc("phoneValidate");
@@ -65,3 +85,7 @@ URL.isURL(inputLink);
 var inputEmail = "CaptainPants@skitskat.org"
 var EMAIL = stringFunc("emailValidate");
 EMAIL.isEmail(inputEmail);
+
+var inputString = "This is a string";
+var NUMSTRING = numFunc("stringToNumber");
+NUMSTRING.strToNum(inputString);
