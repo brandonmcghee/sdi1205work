@@ -23,7 +23,12 @@ var stringFunc = function() {
     }
     
     var isURL = function(link) {
-        
+        if (link.substring(0,5) == "http:" || link.substring(0,6) == "https:") {
+            console.log("Valid Email Address");
+        }
+        else {
+            console.log("Invalid Email Address");
+        }
     }
     
     return {
