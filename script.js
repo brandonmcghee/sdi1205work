@@ -70,7 +70,8 @@ var numFunc = function(name) {
     }
     
     return {
-        "strToNum": strToNum
+        "strToNum": strToNum,
+        "numDeci": numDeci
     }
 }
 
@@ -92,3 +93,7 @@ EMAIL.isEmail(inputEmail);
 var inputString = "42";
 var NUMSTRING = numFunc("stringToNumber");
 NUMSTRING.strToNum(inputString);
+
+var inputNumDecimal = "2.5"
+var NUMDECI = numFunc("numDecimal");
+NUMDECI.numDeci(inputNumDecimal);
