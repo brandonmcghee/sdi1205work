@@ -6,15 +6,24 @@ var stringFunc = function() {
     var isPhoneNum = function(phoneNum) {
         
         var dash = "-";
+        var verify = 0;
         
-        if (phoneNum.charAt(3) == dash && phoneNum.charAt(7) == dash) {
-            console.log("Valid Phone Number")
-            if (phoneNum.length == 11) {
-                console.log("Correct Length");
+        for (var i = 0; i < phoneNum.length; i++) {
+            if (phoneNum.charAt(i) == dash) {
+                verify++;
             }
         }
+        
+        if (verify == 2) {
+            if (phoneNum.charAt(3) == dash && phoneNum.charAt(7) == dash) {
+                console.log("Valid Phone Number")
+                if (phoneNum.length == 11) {
+                    console.log("Correct Length");
+                }
+            }
         else {
             console.log("Invalid Phone Number");
+        }
         }
     }
     
