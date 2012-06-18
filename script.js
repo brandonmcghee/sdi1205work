@@ -14,16 +14,11 @@ var stringFunc = function() {
             }
         }
         
-        if (verify == 2) {
-            if (phoneNum.charAt(3) == dash && phoneNum.charAt(7) == dash) {
-                console.log("Valid Phone Number")
-                if (phoneNum.length == 11) {
-                    console.log("Correct Length");
-                }
-            }
+        if (verify == 2 && phoneNum.length == 12) {
+            console.log("Valid Phone Number");
+        }
         else {
             console.log("Invalid Phone Number");
-        }
         }
     }
     
@@ -33,7 +28,6 @@ var stringFunc = function() {
     
 };
 
-var inputPhone = "407-555-1234";
+var inputPhone = "404-555-1234";
 var PHONE = stringFunc("phoneValidate");
-
 PHONE.isPhone(inputPhone);
