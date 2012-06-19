@@ -18,20 +18,20 @@ var stringFunc = function() {
         }
         
         if (verify == 2 && phoneNum.length == 12) {
-            console.log("Valid Phone Number");
+            console.log(phoneNum + " is a Valid Phone Number");
         }
         else {
-            console.log("Invalid Phone Number");
+            console.log(phoneNum + "is an Invalid Phone Number");
         }
     }
     
     //URL Validation Function
     var isURL = function(link) {
         if (link.substring(0,5) == "http:" || link.substring(0,6) == "https:") {
-            console.log("Valid URL");
+            console.log(link + " is a Valid URL");
         }
         else {
-            console.log("Invalid URL");
+            console.log(link + " is an Invalid URL");
         }
     }
     
@@ -45,10 +45,10 @@ var stringFunc = function() {
         }
         
         if (verify == 2 && address.indexOf(at) < address.indexOf(per)) {
-            console.log("Valid Email Address");
+            console.log(address + " is a Valid Email Address");
         }
         else {
-            console.log("Invalid Email Address");
+            console.log(address + " is an Invalid Email Address");
         }
     }
     
@@ -66,12 +66,12 @@ var numFunc = function(name) {
     
     //String to Number Function
     var strToNum = function(string) {
-        console.log(parseInt(string));
+        console.log("The string of " + string + " has been converted to the Integer of " + parseInt(string));
     }
     //Two Decimal Place Setter Function
     var numDeci = function(num) {
         var fix = num.toFixed(2);
-        console.log(fix);
+        console.log("Two decimal places have been added to " + fix);
     }
     
     return {
@@ -92,7 +92,7 @@ var arrayFunc = function(name) {
                 finalNum = finalNum + parseInt(array[i]);
             }
         }
-        console.log(finalNum);
+        console.log("The value of all Numbers in the given array combined is " + finalNum);
     }
     
     //Find Smallest Greater Value in an Array given a Number
@@ -118,6 +118,7 @@ var arrayFunc = function(name) {
         "smallValue": smallValue
     }
 }
+
 
 //String Functions
 var inputPhone = "555-555-5555";
