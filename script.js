@@ -96,7 +96,23 @@ var arrayFunc = function(name) {
     }
     
     var smallValue = function(value) {
+        var firstArray = [3948,320,2,7665,6,45,12,1,93,14,79,543,2345];
+        var secondArray = [];
+        var finder = value;
         
+        for (var i = 0; i < firstArray.length; i++) {
+            if (firstArray[i] > value) {
+                secondArray.push(firstArray[i]);
+            }
+        }
+        
+        for (var i = 0; i < secondArray.length; i++) {
+            var calc = secondArray[i] - value;
+            
+            if (calc) {
+                console.log(secondArray[i] + " is the lowest greater value to " + value);
+            }
+        }
     }
     
     return {
@@ -128,11 +144,13 @@ var inputNumDecimal = 2.5
 var NUMDECI = numFunc("numDecimal");
 NUMDECI.numDeci(inputNumDecimal);
 
+
+
 //Array Functions
 var inputArray = ["0", 23445939, "http://www.apple.com", 4, 85, 12, "cookies", 869];
 var NUMARRAY = arrayFunc("numInArray");
 NUMARRAY.numInArray(inputArray);
 
-var inputValue = 8;
+var inputValue = 123;
 var SMALLVALARRAY = arrayFunc("smallValueArray");
 SMALLVALARRAY.smallValue(inputValue);
