@@ -95,7 +95,11 @@ var arrayFunc = function(name) {
         console.log(finalNum);
     }
     
+    //Find Smallest Greater Value in an Array given a Number
     var smallValue = function(value) {
+        var intSort = function(a,b) {
+            return a - b;
+        }
         var firstArray = [3948,320,2,7665,6,45,12,1,93,14,79,543,2345];
         var secondArray = [];
         var finder = value;
@@ -105,14 +109,8 @@ var arrayFunc = function(name) {
                 secondArray.push(firstArray[i]);
             }
         }
-        
-        for (var i = 0; i < secondArray.length; i++) {
-            var calc = secondArray[i] - value;
-            
-            if (calc) {
-                console.log(secondArray[i] + " is the lowest greater value to " + value);
-            }
-        }
+        secondArray.sort(intSort);
+        console.log("The smallest greater value of " + value + " is " + secondArray[0]);
     }
     
     return {
@@ -151,6 +149,6 @@ var inputArray = ["0", 23445939, "http://www.apple.com", 4, 85, 12, "cookies", 8
 var NUMARRAY = arrayFunc("numInArray");
 NUMARRAY.numInArray(inputArray);
 
-var inputValue = 123;
+var inputValue = 135;
 var SMALLVALARRAY = arrayFunc("smallValueArray");
 SMALLVALARRAY.smallValue(inputValue);
