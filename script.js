@@ -80,6 +80,25 @@ var numFunc = function(name) {
     }
 }
 
+var arrayFunc = function(name) {
+    
+    var numInArray =  function(array) {
+        
+        var finalNum = 0;
+        
+        for (var i = 0; i < array.length; i++) {
+            if (!isNaN(array[i])) {
+                finalNum = finalNum + parseInt(array[i]);
+            }
+        }
+        console.log(finalNum);
+    }
+    
+    return {
+        "numInArray": numInArray
+    }
+}
+
 //String Functions
 var inputPhone = "555-555-5555";
 var PHONE = stringFunc("phoneValidate");
@@ -102,3 +121,8 @@ NUMSTRING.strToNum(inputString);
 var inputNumDecimal = 2.5
 var NUMDECI = numFunc("numDecimal");
 NUMDECI.numDeci(inputNumDecimal);
+
+//Array Functions
+var inputArray = ["0", 23445939, "http://www.apple.com", 4, 85, 12, "cookies", 869];
+var NUMARRAY = arrayFunc("numInArray");
+NUMARRAY.numInArray(inputArray);
