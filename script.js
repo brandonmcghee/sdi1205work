@@ -82,6 +82,7 @@ var numFunc = function(name) {
 
 var arrayFunc = function(name) {
     
+    //Add Numbers in Array Function
     var numInArray =  function(array) {
         
         var finalNum = 0;
@@ -94,8 +95,13 @@ var arrayFunc = function(name) {
         console.log(finalNum);
     }
     
+    var smallValue = function(value) {
+        
+    }
+    
     return {
-        "numInArray": numInArray
+        "numInArray": numInArray,
+        "smallValue": smallValue
     }
 }
 
@@ -126,3 +132,7 @@ NUMDECI.numDeci(inputNumDecimal);
 var inputArray = ["0", 23445939, "http://www.apple.com", 4, 85, 12, "cookies", 869];
 var NUMARRAY = arrayFunc("numInArray");
 NUMARRAY.numInArray(inputArray);
+
+var inputValue = 8;
+var SMALLVALARRAY = arrayFunc("smallValueArray");
+SMALLVALARRAY.smallValue(inputValue);
